@@ -22,11 +22,6 @@ const checkTime = () => {
 	minutesTime.textContent = minutes;
 	secondsTime.textContent = seconds;
 };
-setInterval(checkTime, 1000);
 
-const logPlayers = () => {
-	teams.forEach(match => {
-		console.log(match.goals);
-	});
-};
-logPlayers();
+setInterval(checkTime, 1000);
+window.addEventListener("load", checkTime);
