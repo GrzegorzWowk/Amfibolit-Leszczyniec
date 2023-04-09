@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
+
 </head>
 
 <body>
@@ -32,36 +33,35 @@
             <h3 class="counter__heading">Pozostało:</h3>
             <div class="counter__body">
                 <div class="counter__box">
-                    <p class="counter__days counter__time">07</p>
+                    <p class="counter__days counter__time"></p>
                     <p class="counter__title">Dni</p>
                 </div>
                 <div class="counter__box">
-                    <p class="counter__hours counter__time">23</p>
+                    <p class="counter__hours counter__time"></p>
                     <p class="counter__title">Godzin</p>
                 </div>
                 <div class="counter__box">
-                    <p class="counter__minutes counter__time">45</p>
+                    <p class="counter__minutes counter__time"></p>
                     <p class="counter__title">Minut</p>
                 </div>
                 <div class="counter__box">
-                    <p class="counter__seconds counter__time">53</p>
+                    <p class="counter__seconds counter__time"></p>
                     <p class="counter__title">Sekund</p>
                 </div>
 
-
-
-
             </div>
         </div>
-
-
+        <div class="btns-box">
+            <button class="btns__table btn">Tabela</button>
+            <button class="btns__stats btn">Statystyki</button>
+            <button class="btns__timetable btn">Terminarz</button>
+        </div>
 
     </div>
 
-
-
-
-    <script src="./js/main.js"></script>
+    <script type="module" src="./js/main.js "></script>
+    <script type="module" src="./js/matches.js"></script>
+    <script type="module" src="./js/players.js"></script>
 </body>
 
 </html>

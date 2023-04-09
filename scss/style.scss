@@ -27,7 +27,7 @@ body {
 	width: 100%;
 	max-width: 1200px;
 	background-color: rgba(240, 248, 255, 0.134);
-	height: 600px;
+	// height: 600px;
 }
 .match {
 	display: flex;
@@ -37,7 +37,7 @@ body {
 		font-weight: bold;
 		text-transform: uppercase;
 		margin-top: 1rem;
-		color: rgb(139, 0, 2);
+		color: rgb(16, 1, 1);
 	}
 
 	&__team-name {
@@ -63,7 +63,6 @@ body {
 	display: flex;
 	flex-direction: column;
 	background-color: rgba(6, 210, 193, 0.047);
-	
 
 	&__heading {
 		text-align: center;
@@ -73,9 +72,6 @@ body {
 	&__body {
 		display: flex;
 		justify-content: space-evenly;
-		align-items: center;
-		
-		
 	}
 	&__box {
 		display: flex;
@@ -85,7 +81,8 @@ body {
 		padding: 1em;
 		background-color: rgba(86, 6, 106, 0.038);
 		color: rgba(40, 4, 4, 0.944);
-		border: 1px solid black
+		border: 1px solid black;
+		width: 18%;
 	}
 	&__time {
 		font-size: 3.2rem;
@@ -95,18 +92,65 @@ body {
 	}
 }
 
+.btns-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1em;
+	margin-top: 1rem;
+	.btn {
+		padding: 0.5em 1em;
+		margin: 0 1rem;
+		border: none;
+		border-radius: 10px;
+		border: 2px solid #520342;
+		background: none;
+		font-size: 1rem;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		cursor: pointer;
+		box-shadow: 3px 3px 10px #07010169;
+		transition: color 0.3s;
+	}
+	.btn:hover {
+		color: #acfd10;
+		box-shadow: 3px 3px 10px red;
+	}
+	.btn:focus {
+		border: none;
+		color: #acfd10;
+		box-shadow: 3px 3px 10px red;
+	}
+}
+
+
+
+
+
+
+
+
+@media (min-width: 450px) {
+	.btns-box {
+		.btn {
+			font-size: 1.6rem;
+		}
+	}
+}
+
 @media (min-width: 490px) {
 	.match__team-name {
 		font-size: 2rem;
 		text-transform: uppercase;
 	}
-	.counter__time{
+	.counter__time {
 		font-size: 7.5rem;
 	}
-	.counter__title{
+	.counter__title {
 		font-size: 2rem;
 	}
 }
+
 @media (min-width: 690px) {
 	.match__team-name {
 		font-size: 2.5rem;
