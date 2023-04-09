@@ -25,15 +25,4 @@ const checkTime = () => {
 
 setInterval(checkTime, 1000);
 
-
-
-
-
-
-
-
-
-
-
-
 window.addEventListener("load", checkTime);
