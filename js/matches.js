@@ -181,4 +181,4 @@ export const teams = [
 		result: "-",
 	},
 ];
-export const number = 32746;
+

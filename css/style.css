@@ -51,6 +51,7 @@ body {
 .match__title {
   text-align: center;
   font-weight: bold;
+  font-size: 2.5rem;
   text-transform: uppercase;
   margin-top: 1rem;
   color: rgb(16, 1, 1);
@@ -65,8 +66,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 45%;
   text-align: center;
+  width: 45%;
   font-size: 1.8rem;
   font-weight: bold;
   padding: 1.2em;
@@ -98,7 +99,8 @@ body {
 }
 .counter__heading {
   text-align: center;
-  font-size: 2.4rem;
+  font-size: 2.5rem;
+  font-weight: bold;
   margin-bottom: 1rem;
 }
 .counter__body {
@@ -126,11 +128,11 @@ body {
   padding: 1em;
   background-color: rgba(86, 6, 106, 0.038);
   color: rgba(40, 4, 4, 0.944);
-  border: 1px solid black;
+  border: none;
   width: 18%;
   border-radius: 10px;
-  -webkit-box-shadow: 3px 3px 10px rgba(7, 1, 1, 0.4117647059);
-          box-shadow: 3px 3px 10px rgba(7, 1, 1, 0.4117647059);
+  -webkit-box-shadow: 4px 4px 10px rgba(7, 1, 1, 0.9411764706);
+          box-shadow: 4px 4px 10px rgba(7, 1, 1, 0.9411764706);
 }
 .counter__time {
   font-size: 3.2rem;
@@ -155,16 +157,15 @@ body {
 .btns-box .btn {
   padding: 0.5em 1em;
   margin: 0 1rem;
-  border: none;
   border-radius: 10px;
-  border: 2px solid #520342;
+  border: 1px solid #000000;
   background: none;
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   cursor: pointer;
-  -webkit-box-shadow: 3px 3px 10px rgba(7, 1, 1, 0.4117647059);
-          box-shadow: 3px 3px 10px rgba(7, 1, 1, 0.4117647059);
+  -webkit-box-shadow: 4px 4px 10px rgba(7, 1, 1, 0.9411764706);
+          box-shadow: 4px 4px 10px rgba(7, 1, 1, 0.9411764706);
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
