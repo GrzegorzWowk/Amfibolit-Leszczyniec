@@ -6,11 +6,6 @@ const hoursTime = document.querySelector(".counter__hours");
 const minutesTime = document.querySelector(".counter__minutes");
 const secondsTime = document.querySelector(".counter__seconds");
 
-const startAllFunctions = () => {
-	logMatchInfo();
-	checkTime();
-};
-
 let presentDate = new Date();
 const closestMatch = teams.find(team => new Date(team.date) > presentDate);
 
@@ -43,5 +38,11 @@ const logMatchInfo = () => {
 		home.textContent = closestMatch.teamName;
 	}
 };
+const startAllFunctions = () => {
+	logMatchInfo();
+	checkTime();
+};
 
 window.addEventListener("load", startAllFunctions);
+
+

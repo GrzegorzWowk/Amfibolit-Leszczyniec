@@ -26,7 +26,7 @@ body {
 	margin: 0 auto;
 	width: 100%;
 	max-width: 1200px;
-	background-color: rgba(240, 248, 255, 0.134);
+	background-color: rgba(254, 255, 255, 0.256);
 	// height: 600px;
 }
 .match {
@@ -68,8 +68,9 @@ body {
 	&__heading {
 		text-align: center;
 		font-size: 2.5rem;
-		font-weight: bold; 
+		font-weight: bold;
 		margin-bottom: 1rem;
+		text-transform: uppercase;
 	}
 	&__body {
 		display: flex;
@@ -82,7 +83,7 @@ body {
 		align-items: center;
 		padding: 1em;
 		background-color: rgba(86, 6, 106, 0.038);
-		color: rgba(40, 4, 4, 0.944);
+		// color: rgba(40, 4, 4, 0.944);
 		border: none;
 		width: 18%;
 		border-radius: 10px;
@@ -101,29 +102,88 @@ body {
 	justify-content: center;
 	align-items: center;
 	padding: 1em;
-	margin-top: 1rem;
+	margin-top: 1.5rem;
 	.btn {
-		padding: 0.5em 1em;
+		padding: 0.6em 1.2em;
 		margin: 0 1rem;
 		border-radius: 10px;
 		border: 1px solid #000000;
-		// border: none;
 		background: none;
 		font-size: 1rem;
-		text-transform: uppercase;
+		font-weight: bold;
 		letter-spacing: 1px;
 		cursor: pointer;
-		box-shadow: 4px 4px 10px #070101f0;
-		transition: color 0.3s;
+		box-shadow: 3px 3px 10px #2b0a03f0;
+		transition: color 0.3s, box-shadow 0.3s;
 	}
 	.btn:hover {
 		color: #acfd10;
 		box-shadow: 3px 3px 10px red;
 	}
 	.btn:focus {
+		outline: none;
 		border: none;
-		color: #e2fb1fea;
+		color: #acfd10;
 		box-shadow: 3px 3px 10px red;
+	}
+}
+
+.timetable {
+	display: flex;
+	flex-direction: column;
+	margin-top: 3rem;
+	&__title {
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+	}
+	&__box {
+		
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 1.3rem;
+		padding-bottom: 1em;
+		box-shadow: 4px 4px 10px #070101f0;
+	}
+	&__date {
+		text-align: center;
+		font-size: 1.6rem;
+		clip-path: polygon(20% 100%, 80% 100%, 100% 0, 0 0);
+		padding: 0 1.9em;
+		margin-bottom: 0.5rem;
+		font-weight: bold;
+		background-color: aliceblue;
+		
+	}
+	&__match {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		background-color: transparent;
+		
+		&-home,
+		&-away {
+			width: 35%;
+			text-align: center;
+			font-weight: bold;
+			font-size: 1.5rem;
+			text-transform: uppercase;
+		}
+		&-result {
+			display: flex;
+			padding: 0 2em;
+			background-color: #f6f5fd;
+			clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+			&-home,
+			&-vs,
+			&-away {
+				font-size: 2rem;
+			}
+		}
 	}
 }
 
@@ -133,12 +193,18 @@ body {
 			font-size: 1.6rem;
 		}
 	}
+	.timetable__date{
+		font-size: 1.6rem;
+	}
+	.timetable__match-home,
+	.timetable__match-away{
+		font-size: 1.8rem;
+	}
 }
 
 @media (min-width: 490px) {
 	.match__team-name {
 		font-size: 2rem;
-		text-transform: uppercase;
 	}
 	.counter__time {
 		font-size: 7.5rem;
