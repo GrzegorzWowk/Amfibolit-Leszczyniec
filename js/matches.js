@@ -5,6 +5,13 @@ export const teams = [
 		place: "home",
 		home: 5,
 		away: 0,
+		scorers: [
+			"3' Sobczak Karol ",
+			"6' Respondek Kamil",
+			"8' Leśniak Adrian",
+			"15' Sobczak Karol",
+			"90' Wowk Grzegorz",
+		],
 	},
 	{
 		teamName: "Skalnik Czarny Bór",
@@ -12,6 +19,7 @@ export const teams = [
 		place: "away",
 		home: 0,
 		away: 1,
+		scorers: ["63' Kluska Kamil"],
 	},
 	{
 		teamName: "Olimpia Kamienna Góra",
@@ -19,6 +27,7 @@ export const teams = [
 		place: "home",
 		home: 1,
 		away: 3,
+		scorers: ["63' Baranowski Piotr"],
 	},
 	{
 		teamName: "Lechia Piechowice",
@@ -26,6 +35,7 @@ export const teams = [
 		place: "away",
 		home: 5,
 		away: 2,
+		scorers: ["53' Furtak Jan", "60' Furtak Jan"],
 	},
 	{
 		teamName: "Chełmsko Śląskie",
@@ -33,6 +43,12 @@ export const teams = [
 		place: "home",
 		home: 4,
 		away: 1,
+		scorers: [
+			"22' Sobczak Karol",
+			"28' Kluska Kamil",
+			"32' Leśniak Krystian",
+			"47' Ciszek Jarosław",
+		],
 	},
 	{
 		teamName: "Halniak Miłków",
@@ -40,6 +56,7 @@ export const teams = [
 		place: "away",
 		home: 1,
 		away: 2,
+		scorers: ["4' Kluska Kamil", "58' Respondek Kamil"],
 	},
 	{
 		teamName: "Czarni Przedwojów",
@@ -47,6 +64,7 @@ export const teams = [
 		place: "home",
 		home: 1,
 		away: 0,
+		scorers: ["37' Leśniak Krystian"],
 	},
 	{
 		teamName: "Orzeł Wojcieszów",
@@ -54,6 +72,7 @@ export const teams = [
 		place: "home",
 		home: 3,
 		away: 3,
+		scorers: ["48' Wowk Grzegorz", "60' Kluska Kamil", "75' Hadała Kamil"],
 	},
 	{
 		teamName: "Orzeł Mysłakowice",
@@ -61,6 +80,7 @@ export const teams = [
 		place: "away",
 		home: 7,
 		away: 0,
+		scorers: [],
 	},
 	{
 		teamName: "Rudawy Janowice Wielkie",
@@ -68,6 +88,7 @@ export const teams = [
 		place: "home",
 		home: 3,
 		away: 2,
+		scorers: ["6' Kluska Kamil", "22' Kluska Kamil", "73' Kluska Kamil"],
 	},
 	{
 		teamName: "Karkonosze Jelenia Góra II",
@@ -75,6 +96,7 @@ export const teams = [
 		place: "away",
 		home: 4,
 		away: 2,
+		scorers: ["17' Kluska Kamil", "22' Respondek Kamil"],
 	},
 	{
 		teamName: "Ks Maciejowa",
@@ -82,6 +104,14 @@ export const teams = [
 		place: "home",
 		home: 6,
 		away: 1,
+		scorers: [
+			"27' Kluska Kamil",
+			"29' Leśniak Krystian",
+			"38' Respondek Kamil",
+			"53' Leśniak Adrian",
+			"63' Migacz Tomasz",
+			"83' Furtak Jan",
+		],
 	},
 	{
 		teamName: "Piast Bolków",
@@ -89,6 +119,7 @@ export const teams = [
 		place: "away",
 		home: 1,
 		away: 2,
+		scorers: ["58' Sobczak Karol", "64' Sobczak Karol"],
 	},
 	{
 		teamName: "Pub Gol Jelenia Góra",
@@ -96,6 +127,12 @@ export const teams = [
 		place: "home",
 		home: 4,
 		away: 1,
+		scorers: [
+			"4' Respondek Kamil",
+			"26' Kluska Kamil",
+			"30' Respondek Kamil",
+			"93' Lesniak Krystian",
+		],
 	},
 	{
 		teamName: "Czarni Strzyżowiec",
@@ -103,6 +140,7 @@ export const teams = [
 		place: "away",
 		home: 3,
 		away: 0,
+		scorers: [],
 	},
 	{
 		teamName: " Mitex Podgórzyn",
@@ -110,6 +148,12 @@ export const teams = [
 		place: "away",
 		home: 0,
 		away: 4,
+		scorers: [
+			"25' Respondek Kamil",
+			"68' Kluska Kamil",
+			"84' Leśniak Krystian",
+			"89' Kluska Emil",
+		],
 	},
 	{
 		teamName: "Skalnik Czarny Bór",
@@ -117,6 +161,12 @@ export const teams = [
 		place: "home",
 		home: 4,
 		away: 0,
+		scorers: [
+			"20' Wowk Grzegorz",
+			"55' Respondek Kamil",
+			"59' Leśniak Adrian",
+			"90' Kluska Kamil",
+		],
 	},
 	{
 		teamName: "Olimpia Kamienna Góra",
@@ -124,6 +174,7 @@ export const teams = [
 		place: "away",
 		home: 3,
 		away: 0,
+		scorers: [],
 	},
 	{
 		teamName: "Lechia Piechowice",
@@ -131,6 +182,7 @@ export const teams = [
 		place: "home",
 		home: 0,
 		away: 1,
+		scorers: [],
 	},
 	{
 		teamName: "Chełmsko Śląskie",
@@ -138,34 +190,39 @@ export const teams = [
 		place: "away",
 		home: 1,
 		away: 3,
+		scorers: ["22' Kluska Kamil", "61' Kluska Kamil", "93' Kluska Kamil"],
 	},
 	{
 		teamName: "Halniak Miłków",
 		date: "04/23/2023 11:00",
 		place: "home",
-		home: "",
-		away: "",
+		home: 0,
+		away: 2,
+		scorers: [],
 	},
 	{
 		teamName: " Czarni Przedwojów",
-		date: "04/29/2023",
+		date: "04/29/2023 16:00",
 		place: "away",
 		home: "",
 		away: "",
+		scorers: [],
 	},
 	{
 		teamName: "Orzeł Wojcieszów",
-		date: "05/07/2023",
+		date: "05/07/2023 11:00",
 		place: "away",
 		home: "",
 		away: "",
+		scorers: [],
 	},
 	{
 		teamName: "Orzeł Mysłakowice",
-		date: "05/14/2023",
+		date: "05/14/2023 11:00",
 		place: "home",
 		home: "",
 		away: "",
+		scorers: [],
 	},
 	{
 		teamName: "Rudawy Janowice Wielkie",
@@ -173,6 +230,7 @@ export const teams = [
 		place: "away",
 		home: "",
 		away: "",
+		scorers: [],
 	},
 	{
 		teamName: "Karkonosze Jelenia Góra II",
@@ -180,6 +238,7 @@ export const teams = [
 		place: "home",
 		home: "",
 		away: "",
+		scorers: [],
 	},
 	{
 		teamName: "Ks Maciejowa",
@@ -187,6 +246,7 @@ export const teams = [
 		place: "away",
 		home: "",
 		away: "",
+		scorers: [],
 	},
 	{
 		teamName: "Piast Bolków",
@@ -194,6 +254,7 @@ export const teams = [
 		place: "home",
 		home: "",
 		away: "",
+		scorers: [],
 	},
 	{
 		teamName: "Pub Gol Jelenia Góra",
@@ -201,6 +262,7 @@ export const teams = [
 		place: "away",
 		home: "",
 		away: "",
+		scorers: [],
 	},
 	{
 		teamName: "Czarni Strzyżowiec",
@@ -208,5 +270,6 @@ export const teams = [
 		place: "home",
 		home: "",
 		away: "",
+		scorers: [],
 	},
 ];

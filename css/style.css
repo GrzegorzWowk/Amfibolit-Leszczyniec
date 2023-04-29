@@ -108,9 +108,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 .counter__box {
   display: -webkit-box;
@@ -155,12 +154,12 @@ body {
   margin-top: 1.5rem;
 }
 .btns-box .btn {
-  padding: 0.6em 1.2em;
-  margin: 0 1rem;
+  padding: 0.4em 0.6em;
+  margin: 0 0.5rem;
   border-radius: 10px;
   border: 1px solid #000000;
   background: none;
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: bold;
   letter-spacing: 1px;
   cursor: pointer;
@@ -173,15 +172,15 @@ body {
 }
 .btns-box .btn:hover {
   color: #acfd10;
-  -webkit-box-shadow: 3px 3px 10px red;
-          box-shadow: 3px 3px 10px red;
+  -webkit-box-shadow: 4px 4px 10px red;
+          box-shadow: 4px 4px 10px red;
 }
 .btns-box .btn:focus {
   outline: none;
   border: none;
   color: #acfd10;
-  -webkit-box-shadow: 3px 3px 10px red;
-          box-shadow: 3px 3px 10px red;
+  -webkit-box-shadow: 4px 4px 10px red;
+          box-shadow: 4px 4px 10px red;
 }
 
 .timetable {
@@ -216,6 +215,25 @@ body {
   padding-bottom: 1em;
   -webkit-box-shadow: 4px 4px 10px rgba(7, 1, 1, 0.9411764706);
           box-shadow: 4px 4px 10px rgba(7, 1, 1, 0.9411764706);
+  background: none;
+  font-family: "Nunito", sans-serif;
+  cursor: pointer;
+  border: none;
+  -webkit-transition: color 0.3s, -webkit-box-shadow 0.3s;
+  transition: color 0.3s, -webkit-box-shadow 0.3s;
+  transition: color 0.3s, box-shadow 0.3s;
+  transition: color 0.3s, box-shadow 0.3s, -webkit-box-shadow 0.3s;
+}
+.timetable__box:hover, .timetable__box:focus {
+  border: none;
+  outline: none;
+  -webkit-box-shadow: 4px 4px 10px red;
+          box-shadow: 4px 4px 10px red;
+}
+.timetable__box:hover .timetable__match-home,
+.timetable__box:hover .timetable__match-away, .timetable__box:focus .timetable__match-home,
+.timetable__box:focus .timetable__match-away {
+  color: #acfd10;
 }
 .timetable__date {
   text-align: center;
@@ -246,6 +264,8 @@ body {
   font-weight: bold;
   font-size: 1.5rem;
   text-transform: uppercase;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 .timetable__match-result {
   display: -webkit-box;
@@ -258,6 +278,29 @@ body {
 }
 .timetable__match-result-home, .timetable__match-result-vs, .timetable__match-result-away {
   font-size: 2rem;
+}
+.timetable__goals-box {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 100%;
+}
+
+.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @media (min-width: 450px) {
@@ -286,5 +329,11 @@ body {
 @media (min-width: 690px) {
   .match__team-name {
     font-size: 2.5rem;
+  }
+}
+@media (min-width: 820px) {
+  .timetable__match-home,
+  .timetable__match-away {
+    width: 40%;
   }
 }/*# sourceMappingURL=style.css.map */

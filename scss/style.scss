@@ -27,8 +27,8 @@ body {
 	width: 100%;
 	max-width: 1200px;
 	background-color: rgba(254, 255, 255, 0.256);
-	// height: 600px;
 }
+
 .match {
 	display: flex;
 	margin-top: 1rem;
@@ -74,7 +74,7 @@ body {
 	}
 	&__body {
 		display: flex;
-		justify-content: space-evenly;
+		justify-content: space-around;
 	}
 	&__box {
 		display: flex;
@@ -83,7 +83,7 @@ body {
 		align-items: center;
 		padding: 1em;
 		background-color: rgba(86, 6, 106, 0.038);
-		// color: rgba(40, 4, 4, 0.944);
+
 		border: none;
 		width: 18%;
 		border-radius: 10px;
@@ -104,12 +104,12 @@ body {
 	padding: 1em;
 	margin-top: 1.5rem;
 	.btn {
-		padding: 0.6em 1.2em;
-		margin: 0 1rem;
+		padding: 0.4em 0.6em;
+		margin: 0 0.5rem;
 		border-radius: 10px;
 		border: 1px solid #000000;
 		background: none;
-		font-size: 1rem;
+		font-size: 1.3rem;
 		font-weight: bold;
 		letter-spacing: 1px;
 		cursor: pointer;
@@ -118,13 +118,13 @@ body {
 	}
 	.btn:hover {
 		color: #acfd10;
-		box-shadow: 3px 3px 10px red;
+		box-shadow: 4px 4px 10px red;
 	}
 	.btn:focus {
 		outline: none;
 		border: none;
 		color: #acfd10;
-		box-shadow: 3px 3px 10px red;
+		box-shadow: 4px 4px 10px red;
 	}
 }
 
@@ -140,13 +140,27 @@ body {
 		margin-bottom: 1rem;
 	}
 	&__box {
-		
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		margin-bottom: 1.3rem;
 		padding-bottom: 1em;
 		box-shadow: 4px 4px 10px #070101f0;
+		background: none;
+		font-family: "Nunito", sans-serif;
+		cursor: pointer;
+		border: none;
+		transition: color 0.3s, box-shadow 0.3s;
+		&:hover,
+		&:focus {
+			.timetable__match-home,
+			.timetable__match-away {
+				color: #acfd10;
+			}
+			border: none;
+			outline: none;
+			box-shadow: 4px 4px 10px red;
+		}
 	}
 	&__date {
 		text-align: center;
@@ -156,7 +170,6 @@ body {
 		margin-bottom: 0.5rem;
 		font-weight: bold;
 		background-color: aliceblue;
-		
 	}
 	&__match {
 		display: flex;
@@ -164,7 +177,7 @@ body {
 		align-items: center;
 		width: 100%;
 		background-color: transparent;
-		
+
 		&-home,
 		&-away {
 			width: 35%;
@@ -172,6 +185,7 @@ body {
 			font-weight: bold;
 			font-size: 1.5rem;
 			text-transform: uppercase;
+			transition: color 0.3s;
 		}
 		&-result {
 			display: flex;
@@ -185,6 +199,20 @@ body {
 			}
 		}
 	}
+	&__goals-box {
+		display: none;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 1rem;
+		font-size: 1.2rem;
+		font-weight: bold;
+		width: 100%;
+	}
+}
+
+.active {
+	display: flex;
 }
 
 @media (min-width: 450px) {
@@ -193,11 +221,11 @@ body {
 			font-size: 1.6rem;
 		}
 	}
-	.timetable__date{
+	.timetable__date {
 		font-size: 1.6rem;
 	}
 	.timetable__match-home,
-	.timetable__match-away{
+	.timetable__match-away {
 		font-size: 1.8rem;
 	}
 }
@@ -217,5 +245,11 @@ body {
 @media (min-width: 690px) {
 	.match__team-name {
 		font-size: 2.5rem;
+	}
+}
+@media (min-width: 820px) {
+	.timetable__match-home,
+	.timetable__match-away {
+		width: 40%;
 	}
 }
