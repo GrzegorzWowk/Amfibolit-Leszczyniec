@@ -210,6 +210,12 @@ body {
 		width: 100%;
 	}
 }
+.table {
+	display: none;
+}
+.stats {
+	display: none;
+}
 
 .active {
 	display: flex;
@@ -239,6 +245,9 @@ body {
 	}
 	.counter__title {
 		font-size: 2rem;
+	}
+	.timetable__goals-info {
+		font-size: 1.4rem;
 	}
 }
 

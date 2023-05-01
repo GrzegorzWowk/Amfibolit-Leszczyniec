@@ -297,6 +297,14 @@ body {
   width: 100%;
 }
 
+.table {
+  display: none;
+}
+
+.stats {
+  display: none;
+}
+
 .active {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -324,6 +332,9 @@ body {
   }
   .counter__title {
     font-size: 2rem;
+  }
+  .timetable__goals-info {
+    font-size: 1.4rem;
   }
 }
 @media (min-width: 690px) {

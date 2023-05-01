@@ -5,6 +5,10 @@ const daysTime = document.querySelector(".counter__days");
 const hoursTime = document.querySelector(".counter__hours");
 const minutesTime = document.querySelector(".counter__minutes");
 const secondsTime = document.querySelector(".counter__seconds");
+const mainButtons = document.querySelectorAll(".btn");
+const table = document.querySelector(".table");
+const timetable = document.querySelector(".timetable");
+const stats = document.querySelector(".stats");
 
 let presentDate = new Date();
 const closestMatch = teams.find(team => new Date(team.date) > presentDate);
@@ -65,7 +69,7 @@ const logTimetable = () => {
 		    </div>
 	        <div class="timetable__match-away"> ${awayMatch}</div>
 		</div>
-	     <div class="timetable__goals-box active ">
+	     <div class="timetable__goals-box ">
 		
 		 </div>
 	`;
@@ -75,40 +79,61 @@ const logTimetable = () => {
 };
 logTimetable();
 
-const goals = () => {
+const logGoalScorers = () => {
 	const btns = document.getElementsByClassName("timetable__goals-box");
-	let matchesNumber = 0;
 	for (let i = 0; i < teams.length; i++) {
-		const p = document.createElement("p");
-		p.classList.add("timetable__goals-info");
-		p.textContent = teams[matchesNumber].scorers;
-		btns[matchesNumber].append(p)
-		matchesNumber++;
-
-		// to wyzej to paragraf na wszystkie gole a ma byc na kzdy osobno
-		// console.log(
-		// 	(btns[matchesNumber].textContent = teams[matchesNumber].scorers)
-		// );
+		const scorers = teams[i].scorers;
+		for (const scorer of scorers) {
+			const p = document.createElement("p");
+			p.classList.add("timetable__goals-info");
+			p.textContent = scorer;
+			btns[i].append(p);
+		}
 	}
 };
-goals();
 
-// console.log(teams[0].scorers);
+logGoalScorers();
 
-// const buttons = document.querySelectorAll(".timetable__box");
+const hideContent = () => {
+	const allContent = document.querySelectorAll(".content");
+	allContent.forEach(content => (content.style.display = "none"));
+};
+const showContent = e => {
+	if (e.target.classList.contains("btn__table")) {
+		hideContent();
+		table.style.display = "flex";
+	} else if (e.target.classList.contains("btn__timetable")) {
+		hideContent();
+		timetable.style.display = "flex";
+	} else {
+		hideContent();
+		stats.style.display = "flex";
+	}
+};
 
-// const click = e => {
-// 	const goals = document.querySelectorAll('.timetable-goals__box')
-// 	goals.forEach(btn => btn.classList.remove("active"));
-// 	const currentButton = e.target.closest(".timetable__box");
-// 	currentButton.lastElementChild.classList.toggle("active");
-// };
+const timetableBtns = [...document.getElementsByClassName("timetable__box")];
+const hideScorers = () => {
+	timetableBtns.forEach(btn => btn.lastElementChild.classList.remove("active"));
+};
 
-// buttons.forEach(btn => btn.addEventListener("click", click));
+const showScorersInfo = e => {
+	hideScorers();
+	const currentButton = e.target.closest(".timetable__box");
+	currentButton.lastElementChild.classList.add("active");
+};
 
 const startAllFunctions = () => {
 	logMatchInfo();
 	checkTime();
 };
-
+mainButtons.forEach(btn => btn.addEventListener("click", showContent));
+timetableBtns.forEach(btn => btn.addEventListener("click", showScorersInfo));
 window.addEventListener("load", startAllFunctions);
+
+// const click = e => {
+// 	const goals = document.getElementsByClassName("timetable-goals__box");
+// 	goals.forEach(btn => btn.classList.remove("active"));
+// 	const currentButton = e.target.closest(".timetable_goals-box");
+// 	currentButton.lastElementChild.classList.toggle("active");
+// };
+// click();
