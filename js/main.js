@@ -91,8 +91,20 @@ const logGoalScorers = () => {
 		}
 	}
 };
-
 logGoalScorers();
+
+const colorWinDrawLose = () => {
+	const matchresults = [
+		...document.getElementsByClassName("timetable__match-result"),
+	];
+	for (let i = 0; i < matchresults.length; i++) {
+		const match = matchresults[i];
+		if (match.firstElementChild.textContent === "") {
+			match.style.backgroundColor = "gray";
+		}
+	}
+};
+colorWinDrawLose();
 
 const hideContent = () => {
 	const allContent = document.querySelectorAll(".content");
@@ -112,14 +124,31 @@ const showContent = e => {
 };
 
 const timetableBtns = [...document.getElementsByClassName("timetable__box")];
-const hideScorers = () => {
+
+const closeScorersAccordion = () => {
 	timetableBtns.forEach(btn => btn.lastElementChild.classList.remove("active"));
 };
 
-const showScorersInfo = e => {
-	hideScorers();
+const openScorersAccordion = e => {
 	const currentButton = e.target.closest(".timetable__box");
-	currentButton.lastElementChild.classList.add("active");
+	if (currentButton.lastElementChild.classList.contains("active")) {
+		currentButton.lastElementChild.classList.remove("active");
+	} else {
+		closeScorersAccordion();
+		currentButton.lastElementChild.classList.toggle("active");
+	}
+};
+const clickOutsideAccordion = e => {
+	if (
+		e.target.classList.contains("timetable__box") ||
+		e.target.parentElement.parentElement.classList.contains("timetable__box") ||
+		e.target.parentElement.parentElement.classList.contains(
+			"timetable__match"
+		) ||
+		e.target.parentElement.parentElement.classList.contains("timetable")
+	)
+		return;
+	closeScorersAccordion();
 };
 
 const startAllFunctions = () => {
@@ -127,13 +156,8 @@ const startAllFunctions = () => {
 	checkTime();
 };
 mainButtons.forEach(btn => btn.addEventListener("click", showContent));
-timetableBtns.forEach(btn => btn.addEventListener("click", showScorersInfo));
+timetableBtns.forEach(btn =>
+	btn.addEventListener("click", openScorersAccordion)
+);
+window.addEventListener("click", clickOutsideAccordion);
 window.addEventListener("load", startAllFunctions);
-
-// const click = e => {
-// 	const goals = document.getElementsByClassName("timetable-goals__box");
-// 	goals.forEach(btn => btn.classList.remove("active"));
-// 	const currentButton = e.target.closest(".timetable_goals-box");
-// 	currentButton.lastElementChild.classList.toggle("active");
-// };
-// click();
