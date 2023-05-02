@@ -99,8 +99,30 @@ const colorWinDrawLose = () => {
 	];
 	for (let i = 0; i < matchresults.length; i++) {
 		const match = matchresults[i];
-		if (match.firstElementChild.textContent === "") {
-			match.style.backgroundColor = "gray";
+		if (
+			match.previousElementSibling.textContent == "Amfibolit Leszczyniec" &&
+			match.firstElementChild.textContent > match.lastElementChild.textContent
+		) {
+			match.style.backgroundColor = "#37fe00";
+		} else if (
+			match.nextElementSibling.textContent == " Amfibolit Leszczyniec" &&
+			match.firstElementChild.textContent < match.lastElementChild.textContent
+		) {
+			match.style.backgroundColor = "#37fe00";
+		} else if (
+			match.nextElementSibling.textContent == " Amfibolit Leszczyniec" &&
+			match.firstElementChild.textContent > match.lastElementChild.textContent
+		) {
+			match.style.backgroundColor = "#e40000";
+		} else if (
+			match.previousElementSibling.textContent == "Amfibolit Leszczyniec" &&
+			match.firstElementChild.textContent < match.lastElementChild.textContent
+		) {
+			match.style.backgroundColor = "#e40000";
+		} else if (!match.firstElementChild.textContent == "") {
+			match.style.backgroundColor = "#ced118";
+		} else {
+			match.style.backgroundColor = "#827b7b";
 		}
 	}
 };
