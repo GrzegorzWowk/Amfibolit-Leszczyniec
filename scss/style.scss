@@ -109,7 +109,7 @@ body {
 		border-radius: 10px;
 		border: 1px solid #000000;
 		background: none;
-		font-size: 1.3rem;
+		font-size: 1.4rem;
 		font-weight: bold;
 		letter-spacing: 1px;
 		cursor: pointer;
@@ -210,9 +210,77 @@ body {
 		width: 100%;
 	}
 }
+
+// -----------------------------------------------------
 .table {
 	display: none;
+	justify-content: center;
+	align-items: center;
+	margin-top: 2rem;
+	&__data {
+		max-width: 800px;
+		width: 100%;
+		background-color: rgba(255, 255, 255, 0.111);
+	}
+
+	&__btn {
+		position: relative;
+		padding: 0.3em 0;
+		border: none;
+		background: none;
+		font-weight: bold;
+		font-size: 1.3rem;
+		font-size: 1.7rem;
+		letter-spacing: 1px;
+		cursor: pointer;
+		text-transform: uppercase;
+		transition: color 0.3s, box-shadow 0.3s;
+	}
+	
+
+	th:focus,
+	th:hover {
+		box-shadow: 4px 4px 10px red;
+	}
+
+	td {
+		text-align: center;
+		padding: 0.5em;
+		font-size: 1.3rem;
+		font-weight: bold;
+	}
+	tr:nth-of-type(even) {
+		background-color: #2b2d4241;
+	}
+	tr:nth-of-type(odd) {
+		background-color: #8d99ae62;
+	}
 }
+.yellow,
+.red {
+	position: relative;
+}
+.yellow::after {
+	position: absolute;
+	background-color: yellow;
+	top: 20%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	content: "";
+	width: 15px;
+	height: 20px;
+}
+.red::after {
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	content: "";
+	width: 15px;
+	height: 20px;
+	background-color: red;
+}
+// ----------------------------------------------------
 .stats {
 	display: none;
 }

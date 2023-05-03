@@ -1,4 +1,4 @@
-export const teams = [
+export const matches= [
 	{
 		teamName: "Mitex Podgórzyn",
 		date: "08/14/2022 11:00",

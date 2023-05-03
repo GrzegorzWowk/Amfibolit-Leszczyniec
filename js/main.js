@@ -1,4 +1,4 @@
-import { teams } from "./matches.js";
+import { matches } from "./matches.js";
 import { players } from "./players.js";
 
 const daysTime = document.querySelector(".counter__days");
@@ -9,13 +9,17 @@ const mainButtons = document.querySelectorAll(".btn");
 const table = document.querySelector(".table");
 const timetable = document.querySelector(".timetable");
 const stats = document.querySelector(".stats");
+const yellowCardBtn = document.querySelector(".yellow");
+console.log(yellowCardBtn);
 
 let presentDate = new Date();
-const closestMatch = teams.find(team => new Date(team.date) > presentDate);
+const closestMatch = matches.find(match => new Date(match.date) > presentDate);
 
 const checkTime = () => {
 	let presentDate = new Date();
-	const closestMatch = teams.find(team => new Date(team.date) > presentDate);
+	const closestMatch = matches.find(
+		match => new Date(match.date) > presentDate
+	);
 	let result = new Date(closestMatch.date) - presentDate;
 	let seconds = Math.floor(result / 1000) % 60;
 	let minutes = Math.floor(result / 1000 / 60) % 60;
@@ -47,25 +51,25 @@ const logTimetable = () => {
 	const timetable = document.querySelector(".timetable");
 	let homeMatch, awayMatch;
 
-	for (const team of teams) {
-		if (team.place === "home") {
+	for (const match of matches) {
+		if (match.place === "home") {
 			homeMatch = "Amfibolit Leszczyniec";
-			awayMatch = team.teamName;
+			awayMatch = match.teamName;
 		} else {
 			awayMatch = "Amfibolit Leszczyniec";
-			homeMatch = team.teamName;
+			homeMatch = match.teamName;
 		}
 
 		const button = document.createElement("button");
 		button.classList.add("timetable__box");
 		button.innerHTML = ` 
-		<p class="timetable__date">${team.date}</p>
+		<p class="timetable__date">${match.date}</p>
 	    <div class="timetable__match">
 			<div class="timetable__match-home">${homeMatch}</div>
 			<div class="timetable__match-result">
-				<p class="timetable__match-result-home">${team.home}</p>
+				<p class="timetable__match-result-home">${match.home}</p>
 				<p class="timetable__match-result-vs">-</p>
-				<p class="timetable__match-result-away">${team.away}</p>
+				<p class="timetable__match-result-away">${match.away}</p>
 		    </div>
 	        <div class="timetable__match-away"> ${awayMatch}</div>
 		</div>
@@ -81,8 +85,8 @@ logTimetable();
 
 const logGoalScorers = () => {
 	const btns = document.getElementsByClassName("timetable__goals-box");
-	for (let i = 0; i < teams.length; i++) {
-		const scorers = teams[i].scorers;
+	for (let i = 0; i < matches.length; i++) {
+		const scorers = matches[i].scorers;
 		for (const scorer of scorers) {
 			const p = document.createElement("p");
 			p.classList.add("timetable__goals-info");
@@ -173,7 +177,7 @@ const clickOutsideAccordion = e => {
 	closeScorersAccordion();
 };
 
-const startAllFunctions = () => {
+const startMainFunctions = () => {
 	logMatchInfo();
 	checkTime();
 };
@@ -182,4 +186,4 @@ timetableBtns.forEach(btn =>
 	btn.addEventListener("click", openScorersAccordion)
 );
 window.addEventListener("click", clickOutsideAccordion);
-window.addEventListener("load", startAllFunctions);
+window.addEventListener("load", startMainFunctions);
