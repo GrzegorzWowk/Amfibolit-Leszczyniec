@@ -156,7 +156,7 @@ export const players = [
 		playerName: "Wodziak Bartosz",
 		goals: 0,
 		assists: 0,
-		yellowCards: 3,
+		yellowCards: 4,
 		redcards: 0,
 		minutes: 560,
 	},

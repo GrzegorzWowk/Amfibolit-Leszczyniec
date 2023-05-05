@@ -35,6 +35,7 @@ const checkTime = () => {
 };
 
 setInterval(checkTime, 1000);
+
 const hideContent = () => {
 	const allContent = document.querySelectorAll(".content");
 	allContent.forEach(content => (content.style.display = "none"));
