@@ -1,4 +1,4 @@
-export const matches= [
+export const matches = [
 	{
 		teamName: "Mitex Podgórzyn",
 		date: "08/14/2022 11:00",
@@ -201,16 +201,16 @@ export const matches= [
 		scorers: [],
 	},
 	{
-		teamName: " Czarni Przedwojów",
+		teamName: "Czarni Przedwojów",
 		date: "04/29/2023 16:00",
 		place: "away",
-		home: "",
-		away: "",
-		scorers: [],
+		home: "4",
+		away: "3",
+		scorers: ["13' Emil Kamil", "22' Respondek Kamil", "70' Kluska Kamil"],
 	},
 	{
 		teamName: "Orzeł Wojcieszów",
-		date: "05/07/2023 11:00",
+		date: "05/07/2023 14:00",
 		place: "away",
 		home: "",
 		away: "",

@@ -10,7 +10,9 @@ const table = document.querySelector(".table");
 const timetable = document.querySelector(".timetable");
 const stats = document.querySelector(".stats");
 const yellowCardBtn = document.querySelector(".yellow");
-console.log(yellowCardBtn);
+const tableContent = document.querySelector(".stats-table__content");
+const statsTableBtns = document.querySelectorAll(".stats-table__btn");
+
 
 let presentDate = new Date();
 const closestMatch = matches.find(match => new Date(match.date) > presentDate);
@@ -33,6 +35,22 @@ const checkTime = () => {
 };
 
 setInterval(checkTime, 1000);
+const hideContent = () => {
+	const allContent = document.querySelectorAll(".content");
+	allContent.forEach(content => (content.style.display = "none"));
+};
+const showContent = e => {
+	if (e.target.classList.contains("btn__table")) {
+		hideContent();
+		table.style.display = "flex";
+	} else if (e.target.classList.contains("btn__timetable")) {
+		hideContent();
+		timetable.style.display = "flex";
+	} else {
+		hideContent();
+		stats.style.display = "flex";
+	}
+};
 
 const logMatchInfo = () => {
 	const home = document.querySelector(".home");
@@ -132,23 +150,6 @@ const colorWinDrawLose = () => {
 };
 colorWinDrawLose();
 
-const hideContent = () => {
-	const allContent = document.querySelectorAll(".content");
-	allContent.forEach(content => (content.style.display = "none"));
-};
-const showContent = e => {
-	if (e.target.classList.contains("btn__table")) {
-		hideContent();
-		table.style.display = "flex";
-	} else if (e.target.classList.contains("btn__timetable")) {
-		hideContent();
-		timetable.style.display = "flex";
-	} else {
-		hideContent();
-		stats.style.display = "flex";
-	}
-};
-
 const timetableBtns = [...document.getElementsByClassName("timetable__box")];
 
 const closeScorersAccordion = () => {
@@ -176,11 +177,79 @@ const clickOutsideAccordion = e => {
 		return;
 	closeScorersAccordion();
 };
+// ======================================
+
+const createTableStatsRow = obj => {
+	const row = document.createElement("tr");
+	const objKeys = Object.keys(obj);
+	objKeys.map(key => {
+		const cell = document.createElement("td");
+		cell.setAttribute("data-attr", key);
+		cell.innerHTML = obj[key];
+		row.appendChild(cell);
+	});
+
+	return row;
+};
+const getTableStatsContent = data => {
+	data.map(obj => {
+		const row = createTableStatsRow(obj);
+		tableContent.appendChild(row);
+	});
+};
+const sortData = (data, param, direction = "asc") => {
+	tableContent.innerHTML = "";
+
+	const sortedData =
+		direction == "desc"
+			? [...data].sort(function (a, b) {
+					if (a[param] < b[param]) {
+						return -1;
+					}
+					if (a[param] > b[param]) {
+						return 1;
+					}
+					return 0;
+			  })
+			: [...data].sort(function (a, b) {
+					if (b[param] < a[param]) {
+						return -1;
+					}
+					if (b[param] > a[param]) {
+						return 1;
+					}
+					return 0;
+			  });
+
+	getTableStatsContent(sortedData);
+};
+const resetButtons = event => {
+	[...statsTableBtns].map(button => {
+		if (button !== event.target) {
+			button.removeAttribute("data-dir");
+		}
+	});
+};
+
+// ===============================================
 
 const startMainFunctions = () => {
 	logMatchInfo();
 	checkTime();
+	getTableStatsContent(players);
 };
+[...statsTableBtns].map(button => {
+	button.addEventListener("click", e => {
+		resetButtons(e);
+		if (e.target.getAttribute("data-dir") == "desc") {
+			sortData(players, e.target.id, "desc");
+			e.target.setAttribute("data-dir", "asc");
+		} else {
+			sortData(players, e.target.id, "asc");
+			e.target.setAttribute("data-dir", "desc");
+		}
+	});
+});
 mainButtons.forEach(btn => btn.addEventListener("click", showContent));
 timetableBtns.forEach(btn =>
 	btn.addEventListener("click", openScorersAccordion)
