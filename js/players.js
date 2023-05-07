@@ -51,7 +51,7 @@ export const players = [
 		playerName: "Kluska Kamil",
 		goals: 16,
 		assists: 0,
-		yellowCards: 5,
+		yellowCards: 6,
 		redcards: 0,
 		minutes: 1680,
 	},
