@@ -21,7 +21,7 @@ export const players = [
 		assists: 0,
 		yellowCards: 4,
 		redcards: 0,
-		minutes: 1427,
+		minutes: 1517,
 	},
 	{
 		playerName: "Furtak Jan",
@@ -29,7 +29,7 @@ export const players = [
 		assists: 0,
 		yellowCards: 3,
 		redcards: 0,
-		minutes: 1258,
+		minutes: 1348,
 	},
 	{
 		playerName: "Hadała Kamil",
@@ -45,15 +45,15 @@ export const players = [
 		assists: 0,
 		yellowCards: 3,
 		redcards: 0,
-		minutes: 1243,
+		minutes: 1333,
 	},
 	{
 		playerName: "Kluska Kamil",
-		goals: 16,
+		goals: 17,
 		assists: 0,
 		yellowCards: 6,
 		redcards: 0,
-		minutes: 1680,
+		minutes: 1770,
 	},
 	{
 		playerName: "Ksepko Michał",
@@ -61,7 +61,7 @@ export const players = [
 		assists: 0,
 		yellowCards: 0,
 		redcards: 0,
-		minutes: 150,
+		minutes: 175,
 	},
 	{
 		playerName: "Leja Mariusz",
@@ -93,7 +93,7 @@ export const players = [
 		assists: 0,
 		yellowCards: 3,
 		redcards: 0,
-		minutes: 1039,
+		minutes: 1129,
 	},
 	{
 		playerName: "Migacz Tomasz",
@@ -101,7 +101,7 @@ export const players = [
 		assists: 0,
 		yellowCards: 1,
 		redcards: 1,
-		minutes: 1785,
+		minutes: 1875,
 	},
 	{
 		playerName: "Morawski Miłosz",
@@ -109,15 +109,15 @@ export const players = [
 		assists: 0,
 		yellowCards: 2,
 		redcards: 0,
-		minutes: 440,
+		minutes: 530,
 	},
 	{
 		playerName: "Respondek Kamil",
-		goals: 9,
+		goals: 10,
 		assists: 0,
 		yellowCards: 3,
 		redcards: 0,
-		minutes: 1745,
+		minutes: 1835,
 	},
 	{
 		playerName: "Respondek Ksawier",
@@ -133,7 +133,7 @@ export const players = [
 		assists: 0,
 		yellowCards: 4,
 		redcards: 0,
-		minutes: 1790,
+		minutes: 1880,
 	},
 	{
 		playerName: "Skrzypiec Marcin",
@@ -149,7 +149,7 @@ export const players = [
 		assists: 0,
 		yellowCards: 1,
 		redcards: 0,
-		minutes: 1435,
+		minutes: 1525,
 	},
 
 	{
@@ -166,6 +166,6 @@ export const players = [
 		assists: 0,
 		yellowCards: 1,
 		redcards: 0,
-		minutes: 1860,
+		minutes: 1925,
 	},
 ];

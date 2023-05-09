@@ -212,9 +212,9 @@ export const matches = [
 		teamName: "Orzeł Wojcieszów",
 		date: "05/07/2023 14:00",
 		place: "away",
-		home: "",
-		away: "",
-		scorers: [],
+		home: "2",
+		away: "2",
+		scorers: ["34' Kluska Kamil", "35' Respondek Kamil"],
 	},
 	{
 		teamName: "Orzeł Mysłakowice",
