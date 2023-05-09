@@ -9,10 +9,8 @@ const mainButtons = document.querySelectorAll(".btn");
 const table = document.querySelector(".table");
 const timetable = document.querySelector(".timetable");
 const stats = document.querySelector(".stats");
-const yellowCardBtn = document.querySelector(".yellow");
 const tableContent = document.querySelector(".stats-table__content");
 const statsTableBtns = document.querySelectorAll(".stats-table__btn");
-
 
 let presentDate = new Date();
 const closestMatch = matches.find(match => new Date(match.date) > presentDate);
@@ -68,7 +66,7 @@ const logMatchInfo = () => {
 
 const logTimetable = () => {
 	const timetable = document.querySelector(".timetable");
-	let homeMatch, awayMatch;
+	let homeMatch, awayMatch,dayMonthDate;
 
 	for (const match of matches) {
 		if (match.place === "home") {
@@ -79,10 +77,14 @@ const logTimetable = () => {
 			homeMatch = match.teamName;
 		}
 
+		dayMonthDate = match.date.slice(3,6)+ match.date.slice(0,3) +  match.date.slice(6)
+		
+		
+
 		const button = document.createElement("button");
 		button.classList.add("timetable__box");
 		button.innerHTML = ` 
-		<p class="timetable__date">${match.date}</p>
+		<p class="timetable__date">${dayMonthDate}</p>
 	    <div class="timetable__match">
 			<div class="timetable__match-home">${homeMatch}</div>
 			<div class="timetable__match-result">
@@ -92,6 +94,7 @@ const logTimetable = () => {
 		    </div>
 	        <div class="timetable__match-away"> ${awayMatch}</div>
 		</div>
+		<p class="timetable__details">szczegóły</p>
 	     <div class="timetable__goals-box ">
 		
 		 </div>
@@ -99,6 +102,7 @@ const logTimetable = () => {
 
 		timetable.append(button);
 	}
+	
 };
 logTimetable();
 
@@ -239,6 +243,10 @@ const startMainFunctions = () => {
 	checkTime();
 	getTableStatsContent(players);
 };
+
+
+
+
 [...statsTableBtns].map(button => {
 	button.addEventListener("click", e => {
 		resetButtons(e);

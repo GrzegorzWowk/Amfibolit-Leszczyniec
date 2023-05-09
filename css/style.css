@@ -227,13 +227,13 @@ body {
 .timetable__box:hover, .timetable__box:focus {
   border: none;
   outline: none;
-  -webkit-box-shadow: 4px 4px 10px red;
-          box-shadow: 4px 4px 10px red;
+  -webkit-box-shadow: 0px 0px 14px 12px rgb(84, 6, 6);
+          box-shadow: 0px 0px 14px 12px rgb(84, 6, 6);
 }
 .timetable__box:hover .timetable__match-home,
 .timetable__box:hover .timetable__match-away, .timetable__box:focus .timetable__match-home,
 .timetable__box:focus .timetable__match-away {
-  color: #acfd10;
+  color: #460303;
 }
 .timetable__date {
   text-align: center;
@@ -278,6 +278,17 @@ body {
 }
 .timetable__match-result-home, .timetable__match-result-vs, .timetable__match-result-away {
   font-size: 2rem;
+}
+.timetable__details {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  padding: 0 2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: underline;
+  -webkit-clip-path: polygon(20% 100%, 80% 100%, 100% 0, 0 0);
+          clip-path: polygon(20% 100%, 80% 100%, 100% 0, 0 0);
+  background-color: aliceblue;
 }
 .timetable__goals-box {
   display: none;
@@ -330,8 +341,8 @@ body {
 }
 .stats th:focus,
 .stats th:hover {
-  -webkit-box-shadow: 4px 4px 10px red;
-          box-shadow: 4px 4px 10px red;
+  -webkit-box-shadow: 4px 4px 10px 5px rgb(84, 6, 6);
+          box-shadow: 4px 4px 10px 5px rgb(84, 6, 6);
 }
 .stats td {
   text-align: center;
