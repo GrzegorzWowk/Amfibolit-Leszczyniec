@@ -220,6 +220,52 @@ body {
 		width: 100%;
 	}
 }
+// ------------------------------------------------------
+.table {
+	display: none;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	margin-top: 2rem;
+	&__data {
+		max-width: 800px;
+		width: 100%;
+		background-color: rgba(255, 255, 255, 0.111);
+	}
+	&__info-btn {
+		padding: 0.3em 0;
+		width: 100%;
+		height: 100%;
+		border: none;
+		background: none;
+		font-weight: bold;
+		font-size: 1.7rem;
+		letter-spacing: 1px;
+		cursor: pointer;
+		text-transform: uppercase;
+		transition: color 0.3s, box-shadow 0.3s;
+	}
+	&__info-btn:focus,
+	&__info-btn:hover {
+		box-shadow: 4px 4px 10px 5px rgb(84, 6, 6);
+	}
+	&__info-teamName {
+		font-size: 2rem;
+		font-weight: bold;
+	}
+	td {
+		text-align: center;
+		padding: 0.5em;
+		font-size: 1.3rem;
+		font-weight: bold;
+	}
+	tr:nth-of-type(even) {
+		background-color: #2b2d4241;
+	}
+	tr:nth-of-type(odd) {
+		background-color: #8d99ae62;
+	}
+}
 
 // -----------------------------------------------------
 .stats {
@@ -247,9 +293,13 @@ body {
 		transition: color 0.3s, box-shadow 0.3s;
 	}
 
-	th:focus,
-	th:hover {
+	&-table__btn:focus,
+	&-table__btn:hover {
 		box-shadow: 4px 4px 10px 5px rgb(84, 6, 6);
+	}
+	&-table__playerName {
+		font-size: 2rem;
+		font-weight: bold;
 	}
 
 	td {
@@ -269,16 +319,7 @@ body {
 .red {
 	position: relative;
 }
-.yellow::after {
-	position: absolute;
-	background-color: yellow;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	content: "";
-	width: 15px;
-	height: 20px;
-}
+.yellow::after,
 .red::after {
 	position: absolute;
 	top: 50%;
@@ -287,6 +328,9 @@ body {
 	content: "";
 	width: 15px;
 	height: 20px;
+	background-color: yellow;
+}
+.red::after {
 	background-color: red;
 }
 // ----------------------------------------------------

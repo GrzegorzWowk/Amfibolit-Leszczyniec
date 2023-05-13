@@ -52,25 +52,51 @@
             </div>
         </div>
         <div class="btns-box">
-            <button class="btn__table btn">Tabela</button>
+            <button class="btn__table btn" data-sort="pts">Tabela</button>
             <button class="btn__timetable btn">Terminarz</button>
-            <button class="btn__stats btn">Statystyki</button>
+            <button class="btn__stats btn" data-sort="goals">Statystyki</button>
         </div>
 
 
 
-        <div class="table content "></div>
+        <div class="table content ">
+            <table class="table__data">
+                <thead>
+                    <tr>
+                        <th>
+                            <p class="table__info-teamName" data-sort="teamName">Zespół</p>
+                        </th>
+                        <th><button class="table__info-btn" data-sort="matches">M</button></th>
+                        <th><button class="table__info-btn" data-sort="pts">Pkt</button></th>
+                        <th><button class="table__info-btn" data-sort="won">W</button></th>
+                        <th><button class="table__info-btn" data-sort="draw">R</button></th>
+                        <th><button class="table__info-btn" data-sort="lost">P</button></th>
+                    </tr>
+                </thead>
+                <tbody class="table__content"></tbody>
+            </table>
+        </div>
+
+
+
+
+
         <div class="timetable content "></div>
+
+
+
         <div class="stats content ">
             <table class="stats-table__data">
                 <thead>
                     <tr>
-                        <th><button class="stats-table__btn" id="playerName">Zawodnik</button></th>
-                        <th><button class="stats-table__btn" id="goals">G</button></th>
-                        <th><button class="stats-table__btn" id="assists">A</button></th>
-                        <th><button class="stats-table__btn yellow" id="yellowCards">.</button></th>
-                        <th><button class="stats-table__btn red" id="redCards">.</button></th>
-                        <th><button class="stats-table__btn" id="minutes">Min</button></th>
+                        <th>
+                            <p class="stats-table__playerName" data-sort="playerName">Zawodnik</p>
+                        </th>
+                        <th><button class="stats-table__btn" data-sort="goals">G</button></th>
+                        <th><button class="stats-table__btn" data-sort="assists">A</button></th>
+                        <th><button class="stats-table__btn yellow" data-sort="yellowCards">.</button></th>
+                        <th><button class="stats-table__btn red" data-sort="redCards">.</button></th>
+                        <th><button class="stats-table__btn" data-sort="minutes">Min</button></th>
                     </tr>
                 </thead>
                 <tbody class="stats-table__content">
@@ -96,5 +122,3 @@
 </body>
 
 </html>
-
-

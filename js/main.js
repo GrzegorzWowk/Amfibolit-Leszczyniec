@@ -1,16 +1,24 @@
 import { matches } from "./matches.js";
 import { players } from "./players.js";
+import { teams } from "./teams.js";
+
 
 const daysTime = document.querySelector(".counter__days");
 const hoursTime = document.querySelector(".counter__hours");
 const minutesTime = document.querySelector(".counter__minutes");
 const secondsTime = document.querySelector(".counter__seconds");
 const mainButtons = document.querySelectorAll(".btn");
+const mainStatsBtn = document.querySelector(".btn__stats");
+const mainTableBtn = document.querySelector(".btn__table");
+const tableBtns = document.querySelectorAll(".table__info-btn");
 const table = document.querySelector(".table");
+const tableContent = document.querySelector(".table__content");
 const timetable = document.querySelector(".timetable");
 const stats = document.querySelector(".stats");
-const tableContent = document.querySelector(".stats-table__content");
-const statsTableBtns = document.querySelectorAll(".stats-table__btn");
+const statsTableContent = document.querySelector(".stats-table__content");
+const statsTableBtns = document.querySelectorAll(
+	".stats-table__btn:not(#playerName)"
+);
 
 let presentDate = new Date();
 const closestMatch = matches.find(match => new Date(match.date) > presentDate);
@@ -66,7 +74,7 @@ const logMatchInfo = () => {
 
 const logTimetable = () => {
 	const timetable = document.querySelector(".timetable");
-	let homeMatch, awayMatch,dayMonthDate;
+	let homeMatch, awayMatch, dayMonthDate;
 
 	for (const match of matches) {
 		if (match.place === "home") {
@@ -77,9 +85,8 @@ const logTimetable = () => {
 			homeMatch = match.teamName;
 		}
 
-		dayMonthDate = match.date.slice(3,6)+ match.date.slice(0,3) +  match.date.slice(6)
-		
-		
+		dayMonthDate =
+			match.date.slice(3, 6) + match.date.slice(0, 3) + match.date.slice(6);
 
 		const button = document.createElement("button");
 		button.classList.add("timetable__box");
@@ -102,7 +109,6 @@ const logTimetable = () => {
 
 		timetable.append(button);
 	}
-	
 };
 logTimetable();
 
@@ -118,7 +124,6 @@ const logGoalScorers = () => {
 		}
 	}
 };
-logGoalScorers();
 
 const colorWinDrawLose = () => {
 	const matchresults = [
@@ -153,7 +158,6 @@ const colorWinDrawLose = () => {
 		}
 	}
 };
-colorWinDrawLose();
 
 const timetableBtns = [...document.getElementsByClassName("timetable__box")];
 
@@ -196,69 +200,75 @@ const createTableStatsRow = obj => {
 
 	return row;
 };
+
+
 const getTableStatsContent = data => {
+	data.map(obj => {
+		const row = createTableStatsRow(obj);
+		statsTableContent.appendChild(row);
+	});
+};
+const sortStatsData = (data, param) => {
+	statsTableContent.innerHTML = "";
+
+	const sortedData = [...data].sort((a, b) => {
+		if (a[param] < b[param]) {
+			return 1;
+		}
+		if (a[param] > b[param]) {
+			return -1;
+		}
+		return 0;
+	});
+
+	getTableStatsContent(sortedData);
+};
+
+// ====================================================
+
+
+const getTableContent = data => {
 	data.map(obj => {
 		const row = createTableStatsRow(obj);
 		tableContent.appendChild(row);
 	});
 };
-const sortData = (data, param, direction = "asc") => {
+const sortTableData = (data, param) => {
 	tableContent.innerHTML = "";
 
-	const sortedData =
-		direction == "desc"
-			? [...data].sort(function (a, b) {
-					if (a[param] < b[param]) {
-						return -1;
-					}
-					if (a[param] > b[param]) {
-						return 1;
-					}
-					return 0;
-			  })
-			: [...data].sort(function (a, b) {
-					if (b[param] < a[param]) {
-						return -1;
-					}
-					if (b[param] > a[param]) {
-						return 1;
-					}
-					return 0;
-			  });
-
-	getTableStatsContent(sortedData);
-};
-const resetButtons = event => {
-	[...statsTableBtns].map(button => {
-		if (button !== event.target) {
-			button.removeAttribute("data-dir");
+	const sortedData = [...data].sort((a, b) => {
+		if (a[param] < b[param]) {
+			return 1;
 		}
+		if (a[param] > b[param]) {
+			return -1;
+		}
+		return 0;
 	});
+
+	getTableContent(sortedData);
 };
 
-// ===============================================
-
+// ========================================================
 const startMainFunctions = () => {
 	logMatchInfo();
 	checkTime();
-	getTableStatsContent(players);
+	logGoalScorers();
+	colorWinDrawLose();
+
 };
 
-
-
-
-[...statsTableBtns].map(button => {
+[...statsTableBtns, mainStatsBtn].map(button => {
 	button.addEventListener("click", e => {
-		resetButtons(e);
-		if (e.target.getAttribute("data-dir") == "desc") {
-			sortData(players, e.target.id, "desc");
-			e.target.setAttribute("data-dir", "asc");
-		} else {
-			sortData(players, e.target.id, "asc");
-			e.target.setAttribute("data-dir", "desc");
-		}
+		sortStatsData(players, e.target.getAttribute("data-sort"));
 	});
 });
+[...tableBtns, mainTableBtn].map(button => {
+	button.addEventListener("click", e => {
+		sortTableData(teams, e.target.getAttribute("data-sort"));
+	});
+});
+
 mainButtons.forEach(btn => btn.addEventListener("click", showContent));
 timetableBtns.forEach(btn =>
 	btn.addEventListener("click", openScorersAccordion)

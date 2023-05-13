@@ -4,7 +4,7 @@ export const players = [
 		goals: 0,
 		assists: 0,
 		yellowCards: 0,
-		redcards: 0,
+		redCards: 0,
 		minutes: 180,
 	},
 	{
@@ -12,7 +12,7 @@ export const players = [
 		goals: 1,
 		assists: 0,
 		yellowCards: 0,
-		redcards: 0,
+		redCards: 0,
 		minutes: 295,
 	},
 	{
@@ -20,7 +20,7 @@ export const players = [
 		goals: 1,
 		assists: 0,
 		yellowCards: 4,
-		redcards: 0,
+		redCards: 0,
 		minutes: 1517,
 	},
 	{
@@ -28,7 +28,7 @@ export const players = [
 		goals: 3,
 		assists: 0,
 		yellowCards: 3,
-		redcards: 0,
+		redCards: 0,
 		minutes: 1348,
 	},
 	{
@@ -36,7 +36,7 @@ export const players = [
 		goals: 1,
 		assists: 0,
 		yellowCards: 0,
-		redcards: 0,
+		redCards: 0,
 		minutes: 1030,
 	},
 	{
@@ -44,7 +44,7 @@ export const players = [
 		goals: 2,
 		assists: 0,
 		yellowCards: 3,
-		redcards: 0,
+		redCards: 0,
 		minutes: 1333,
 	},
 	{
@@ -52,7 +52,7 @@ export const players = [
 		goals: 17,
 		assists: 0,
 		yellowCards: 6,
-		redcards: 0,
+		redCards: 0,
 		minutes: 1770,
 	},
 	{
@@ -60,7 +60,7 @@ export const players = [
 		goals: 0,
 		assists: 0,
 		yellowCards: 0,
-		redcards: 0,
+		redCards: 0,
 		minutes: 175,
 	},
 	{
@@ -68,7 +68,7 @@ export const players = [
 		goals: 0,
 		assists: 0,
 		yellowCards: 1,
-		redcards: 0,
+		redCards: 0,
 		minutes: 380,
 	},
 	{
@@ -76,7 +76,7 @@ export const players = [
 		goals: 3,
 		assists: 0,
 		yellowCards: 1,
-		redcards: 1,
+		redCards: 1,
 		minutes: 932,
 	},
 	{
@@ -84,7 +84,7 @@ export const players = [
 		goals: 5,
 		assists: 0,
 		yellowCards: 5,
-		redcards: 0,
+		redCards: 0,
 		minutes: 1438,
 	},
 	{
@@ -92,7 +92,7 @@ export const players = [
 		goals: 0,
 		assists: 0,
 		yellowCards: 3,
-		redcards: 0,
+		redCards: 0,
 		minutes: 1129,
 	},
 	{
@@ -100,7 +100,7 @@ export const players = [
 		goals: 1,
 		assists: 0,
 		yellowCards: 1,
-		redcards: 1,
+		redCards: 1,
 		minutes: 1875,
 	},
 	{
@@ -108,7 +108,7 @@ export const players = [
 		goals: 0,
 		assists: 0,
 		yellowCards: 2,
-		redcards: 0,
+		redCards: 0,
 		minutes: 530,
 	},
 	{
@@ -116,7 +116,7 @@ export const players = [
 		goals: 10,
 		assists: 0,
 		yellowCards: 3,
-		redcards: 0,
+		redCards: 0,
 		minutes: 1835,
 	},
 	{
@@ -124,7 +124,7 @@ export const players = [
 		goals: 0,
 		assists: 0,
 		yellowCards: 0,
-		redcards: 0,
+		redCards: 0,
 		minutes: 230,
 	},
 	{
@@ -132,7 +132,7 @@ export const players = [
 		goals: 0,
 		assists: 0,
 		yellowCards: 4,
-		redcards: 0,
+		redCards: 0,
 		minutes: 1880,
 	},
 	{
@@ -140,7 +140,7 @@ export const players = [
 		goals: 0,
 		assists: 0,
 		yellowCards: 1,
-		redcards: 0,
+		redCards: 0,
 		minutes: 405,
 	},
 	{
@@ -148,7 +148,7 @@ export const players = [
 		goals: 5,
 		assists: 0,
 		yellowCards: 1,
-		redcards: 0,
+		redCards: 0,
 		minutes: 1525,
 	},
 
@@ -157,7 +157,7 @@ export const players = [
 		goals: 0,
 		assists: 0,
 		yellowCards: 4,
-		redcards: 0,
+		redCards: 0,
 		minutes: 560,
 	},
 	{
@@ -165,7 +165,7 @@ export const players = [
 		goals: 3,
 		assists: 0,
 		yellowCards: 1,
-		redcards: 0,
+		redCards: 0,
 		minutes: 1925,
 	},
 ];
