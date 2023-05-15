@@ -192,6 +192,7 @@ body {
 			padding: 0 2em;
 			background-color: #f6f5fd;
 			clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+			border: 3px solid rgb(0, 0, 0);
 			&-home,
 			&-vs,
 			&-away {
