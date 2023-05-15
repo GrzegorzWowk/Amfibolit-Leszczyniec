@@ -2,7 +2,6 @@ import { matches } from "./matches.js";
 import { players } from "./players.js";
 import { teams } from "./teams.js";
 
-
 const daysTime = document.querySelector(".counter__days");
 const hoursTime = document.querySelector(".counter__hours");
 const minutesTime = document.querySelector(".counter__minutes");
@@ -201,7 +200,6 @@ const createTableStatsRow = obj => {
 	return row;
 };
 
-
 const getTableStatsContent = data => {
 	data.map(obj => {
 		const row = createTableStatsRow(obj);
@@ -226,7 +224,6 @@ const sortStatsData = (data, param) => {
 
 // ====================================================
 
-
 const getTableContent = data => {
 	data.map(obj => {
 		const row = createTableStatsRow(obj);
@@ -245,8 +242,9 @@ const sortTableData = (data, param) => {
 		}
 		return 0;
 	});
-
+	
 	getTableContent(sortedData);
+
 };
 
 // ========================================================
@@ -255,7 +253,6 @@ const startMainFunctions = () => {
 	checkTime();
 	logGoalScorers();
 	colorWinDrawLose();
-
 };
 
 [...statsTableBtns, mainStatsBtn].map(button => {
@@ -275,3 +272,10 @@ timetableBtns.forEach(btn =>
 );
 window.addEventListener("click", clickOutsideAccordion);
 window.addEventListener("load", startMainFunctions);
+
+// for (let i = 0; i < teams.length; i++) {
+// 	let number = i + 1;
+// 	const p = document.createElement("p");
+// 	p.textContent = i + 1;
+// 	console.log(p);
+// }

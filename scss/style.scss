@@ -244,6 +244,7 @@ body {
 		cursor: pointer;
 		text-transform: uppercase;
 		transition: color 0.3s, box-shadow 0.3s;
+		
 	}
 	&__info-btn:focus,
 	&__info-btn:hover {
@@ -252,6 +253,7 @@ body {
 	&__info-teamName {
 		font-size: 2rem;
 		font-weight: bold;
+	
 	}
 	td {
 		text-align: center;
