@@ -19,6 +19,8 @@ const statsTableBtns = document.querySelectorAll(
 	".stats-table__btn:not(#playerName)"
 );
 
+
+
 let presentDate = new Date();
 const closestMatch = matches.find(match => new Date(match.date) > presentDate);
 
@@ -242,9 +244,8 @@ const sortTableData = (data, param) => {
 		}
 		return 0;
 	});
-	
-	getTableContent(sortedData);
 
+	getTableContent(sortedData);
 };
 
 // ========================================================
@@ -253,6 +254,7 @@ const startMainFunctions = () => {
 	checkTime();
 	logGoalScorers();
 	colorWinDrawLose();
+	
 };
 
 [...statsTableBtns, mainStatsBtn].map(button => {
