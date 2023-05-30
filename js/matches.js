@@ -236,9 +236,9 @@ export const matches = [
 		teamName: "Karkonosze Jelenia Góra II",
 		date: "05/28/2023 11:00",
 		place: "home",
-		home: "",
-		away: "",
-		scorers: [],
+		home: 3,
+		away: 0,
+		scorers: ["38' Kluska Emil", "56' Respondek Kamil", "58' Kluska Emil"],
 	},
 	{
 		teamName: "Ks Maciejowa",
