@@ -266,7 +266,7 @@ export const matches = [
 	},
 	{
 		teamName: "Pub Gol Jelenia Góra",
-		date: "06/18/2023",
+		date: "06/17/2023 15:00",
 		place: "away",
 		home: 4,
 		away: 2,
@@ -274,7 +274,21 @@ export const matches = [
 	},
 	{
 		teamName: "Czarni Strzyżowiec",
-		date: "06/25/2023",
+		date: "06/25/2023 11:00",
+		place: "home",
+		home: 5,
+		away: 1,
+		scorers: [
+			"28' Respondek Kamil",
+			"40' Sobczak Karol",
+			"52' Kluska Kamil",
+			"54' Kluska Kamil",
+			"85' Respondek Kamil",
+		],
+	},
+	{
+		teamName: "NOWY SEZON",
+		date: "08/13/2023 11:00",
 		place: "home",
 		home: "",
 		away: "",
