@@ -22,6 +22,7 @@ const statsTableBtns = document.querySelectorAll(
 let presentDate = new Date();
 const closestMatch = matches.find(match => new Date(match.date) > presentDate);
 
+
 const checkTime = () => {
 	let presentDate = new Date();
 	const closestMatch = matches.find(
