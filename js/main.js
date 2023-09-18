@@ -22,7 +22,6 @@ const statsTableBtns = document.querySelectorAll(
 let presentDate = new Date();
 const closestMatch = matches.find(match => new Date(match.date) > presentDate);
 
-
 const checkTime = () => {
 	let presentDate = new Date();
 	const closestMatch = matches.find(
@@ -133,22 +132,26 @@ const colorWinDrawLose = () => {
 		const match = matchresults[i];
 		if (
 			match.previousElementSibling.textContent == "Amfibolit Leszczyniec" &&
-			match.firstElementChild.textContent > match.lastElementChild.textContent
+			parseInt(match.firstElementChild.textContent) >
+				parseInt(match.lastElementChild.textContent)
 		) {
 			match.style.backgroundColor = "#37fe00";
 		} else if (
 			match.nextElementSibling.textContent == " Amfibolit Leszczyniec" &&
-			match.firstElementChild.textContent < match.lastElementChild.textContent
+			parseInt(match.firstElementChild.textContent) <
+				parseInt(match.lastElementChild.textContent)
 		) {
 			match.style.backgroundColor = "#37fe00";
 		} else if (
 			match.nextElementSibling.textContent == " Amfibolit Leszczyniec" &&
-			match.firstElementChild.textContent > match.lastElementChild.textContent
+			parseInt(match.firstElementChild.textContent) >
+				parseInt(match.lastElementChild.textContent)
 		) {
 			match.style.backgroundColor = "#e40000";
 		} else if (
 			match.previousElementSibling.textContent == "Amfibolit Leszczyniec" &&
-			match.firstElementChild.textContent < match.lastElementChild.textContent
+			parseInt(match.firstElementChild.textContent) <
+			parseInt(match.lastElementChild.textContent)
 		) {
 			match.style.backgroundColor = "#e40000";
 		} else if (!match.firstElementChild.textContent == "") {
