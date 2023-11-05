@@ -21,7 +21,7 @@ export const players = [
 		assists: 1,
 		yellowCards: 0,
 		redCards: 0,
-		minutes: 654,
+		minutes: 676,
 	},
 	{
 		playerName: "Furtak Jan",
@@ -29,7 +29,7 @@ export const players = [
 		assists: 7,
 		yellowCards: 0,
 		redCards: 0,
-		minutes: 830,
+		minutes: 920,
 	},
 	{
 		playerName: "Hadała Kamil",
@@ -37,7 +37,7 @@ export const players = [
 		assists: 0,
 		yellowCards: 2,
 		redCards: 0,
-		minutes: 665,
+		minutes: 755,
 	},
 	{
 		playerName: "Kluska Emil",
@@ -61,7 +61,7 @@ export const players = [
 		assists: 1,
 		yellowCards: 6,
 		redCards: 0,
-		minutes: 787,
+		minutes: 877,
 	},
 	{
 		playerName: "Ksepko Michał",
@@ -77,7 +77,7 @@ export const players = [
 		assists: 0,
 		yellowCards: 0,
 		redCards: 0,
-		minutes: 30,
+		minutes: 45,
 	},
 	{
 		playerName: "Lewicki Radosław",
@@ -85,7 +85,7 @@ export const players = [
 		assists: 0,
 		yellowCards: 0,
 		redCards: 0,
-		minutes: 275,
+		minutes: 350,
 	},
 	{
 		playerName: "Leśniak Adrian",
@@ -117,7 +117,7 @@ export const players = [
 		assists: 0,
 		yellowCards: 0,
 		redCards: 0,
-		minutes: 886,
+		minutes: 976,
 	},
 	{
 		playerName: "Morawski Miłosz",
@@ -125,7 +125,7 @@ export const players = [
 		assists: 0,
 		yellowCards: 2,
 		redCards: 0,
-		minutes: 712,
+		minutes: 802,
 	},
 	{
 		playerName: "Respondek Kamil",
@@ -133,7 +133,7 @@ export const players = [
 		assists: 5,
 		yellowCards: 1,
 		redCards: 0,
-		minutes: 630,
+		minutes: 720,
 	},
 	{
 		playerName: "Respondek Ksawier",
@@ -149,7 +149,7 @@ export const players = [
 		assists: 0,
 		yellowCards: 2,
 		redCards: 0,
-		minutes: 805,
+		minutes: 895,
 	},
 	{
 		playerName: "Skrzypiec Marcin",
@@ -157,7 +157,7 @@ export const players = [
 		assists: 0,
 		yellowCards: 1,
 		redCards: 0,
-		minutes: 144,
+		minutes: 212,
 	},
 	{
 		playerName: "Sobczak Karol",
@@ -182,7 +182,7 @@ export const players = [
 		assists: 0,
 		yellowCards: 2,
 		redCards: 0,
-		minutes: 630,
+		minutes: 720,
 	},
 	{
 		playerName: "Wowk Grzegorz",
@@ -190,7 +190,7 @@ export const players = [
 		assists: 1,
 		yellowCards: 0,
 		redCards: 0,
-		minutes: 690,
+		minutes: 780,
 	},
 	{
 		playerName: "Zapała Kacper",
