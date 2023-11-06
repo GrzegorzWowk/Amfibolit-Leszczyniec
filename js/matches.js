@@ -117,7 +117,7 @@ export const matches = [
 		place: "home",
 		home: 2,
 		away: 1,
-		scorers: [],
+		scorers: ["28' Grzegorz Wowk", "53' Grzegorz Wowk"],
 	},
 	{
 		teamName: "Dolomit Pisarzowice",
