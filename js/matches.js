@@ -123,9 +123,9 @@ export const matches = [
 		teamName: "Dolomit Pisarzowice",
 		date: "11/12/2023 11:00",
 		place: "away",
-		home: "",
-		away: "",
-		scorers: [],
+		home: 1,
+		away: 2,
+		scorers: ["19' Karol Sobczak", "25' Karol Sobczak"],
 	},
 	{
 		teamName: "Lechia Piechowice",
