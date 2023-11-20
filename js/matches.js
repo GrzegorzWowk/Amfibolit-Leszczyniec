@@ -131,8 +131,15 @@ export const matches = [
 		teamName: "Lechia Piechowice",
 		date: "11/19/2023 11:00",
 		place: "home",
-		home: "",
-		away: "",
+		home: 3,
+		away: 4,
+		scorers: ["6' Kamil Respondek","63' Kamil Kluska","69' Kamil Kluska",],
+	},{
+		teamName: "Rudawy Janowice Wielkie",
+		date: "03/01/2024 11:00",
+		place: "home",
+		home: '',
+		away: '',
 		scorers: [],
-	},
+	}
 ];
