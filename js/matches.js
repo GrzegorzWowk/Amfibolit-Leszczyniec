@@ -152,8 +152,8 @@ export const matches = [
 		teamName: "Halniak Miłków",
 		date: "03/23/2024 15:00",
 		place: "away",
-		home: "",
-		away: "",
+		home: 4,
+		away: 0,
 		scorers: [],
 	},
 	{
