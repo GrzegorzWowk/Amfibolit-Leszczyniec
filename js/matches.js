@@ -160,9 +160,13 @@ export const matches = [
 		teamName: "Pub Gol Jelenia Góra",
 		date: "04/07/2024 11:00",
 		place: "home",
-		home: "",
-		away: "",
-		scorers: [],
+		home: 4,
+		away: 0,
+		scorers: [
+			"3' Karol Sobczak",
+			"15' Jan Furtak",
+			"22' Kamil Kluska",
+			"78' Jan Furtak",],
 	},
 	{
 		teamName: "Karkonosze II Jelenia Góra",

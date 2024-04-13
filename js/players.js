@@ -13,7 +13,7 @@ export const players = [
 		assists: 0,
 		yellowCards: 0,
 		redCards: 0,
-		minutes: 168,
+		minutes: 228,
 	},
 	{
 		playerName: "Baranowski Piotr",
@@ -21,7 +21,7 @@ export const players = [
 		assists: 0,
 		yellowCards: 2,
 		redCards: 0,
-		minutes: 343,
+		minutes: 388,
 	},
 	{
 		playerName: "Ciszek Jarosław",
@@ -33,11 +33,11 @@ export const players = [
 	},
 	{
 		playerName: "Furtak Jan",
-		goals: 9,
+		goals: 11,
 		assists: 8,
 		yellowCards: 1,
 		redCards: 0,
-		minutes: 1185,
+		minutes: 1275,
 	},
 	{
 		playerName: "Hadała Kamil",
@@ -65,11 +65,11 @@ export const players = [
 	},
 	{
 		playerName: "Kluska Kamil",
-		goals: 8,
-		assists: 1,
+		goals: 9,
+		assists: 2,
 		yellowCards: 8,
 		redCards: 0,
-		minutes: 1225,
+		minutes: 1315,
 	},
 	{
 		playerName: "Ksepko Michał",
@@ -117,7 +117,7 @@ export const players = [
 		assists: 0,
 		yellowCards: 3,
 		redCards: 0,
-		minutes: 466,
+		minutes: 476,
 	},
 	{
 		playerName: "Migacz Tomasz",
@@ -125,7 +125,7 @@ export const players = [
 		assists: 0,
 		yellowCards: 1,
 		redCards: 0,
-		minutes: 1426,
+		minutes: 1516,
 	},
 	{
 		playerName: "Morawski Miłosz",
@@ -133,7 +133,7 @@ export const players = [
 		assists: 1,
 		yellowCards: 4,
 		redCards: 0,
-		minutes: 1109,
+		minutes: 1199,
 	},
 	{
 		playerName: "Respondek Kamil",
@@ -141,7 +141,7 @@ export const players = [
 		assists: 7,
 		yellowCards: 1,
 		redCards: 0,
-		minutes: 1170,
+		minutes: 1260,
 	},
 	{
 		playerName: "Respondek Ksawier",
@@ -149,7 +149,7 @@ export const players = [
 		assists: 0,
 		yellowCards: 0,
 		redCards: 0,
-		minutes: 60,
+		minutes: 90,
 	},
 	{
 		playerName: "Siwiński Paweł",
@@ -157,7 +157,7 @@ export const players = [
 		assists: 0,
 		yellowCards: 3,
 		redCards: 1,
-		minutes: 1165,
+		minutes: 1255,
 	},
 	{
 		playerName: "Skrzypiec Marcin",
@@ -169,11 +169,11 @@ export const players = [
 	},
 	{
 		playerName: "Sobczak Karol",
-		goals: 2,
+		goals: 3,
 		assists: 0,
 		yellowCards: 1,
 		redCards: 0,
-		minutes: 799,
+		minutes: 889,
 	},
 	{
 		playerName: "Tarasek Bartłomiej",
@@ -189,7 +189,7 @@ export const players = [
 		assists: 1,
 		yellowCards: 1,
 		redCards: 0,
-		minutes: 210,
+		minutes: 255,
 	},
 
 	{
@@ -206,7 +206,7 @@ export const players = [
 		assists: 1,
 		yellowCards: 0,
 		redCards: 0,
-		minutes: 1230,
+		minutes: 1320,
 	},
 	{
 		playerName: "Zapała Kacper",
