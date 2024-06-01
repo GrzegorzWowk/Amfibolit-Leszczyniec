@@ -235,7 +235,7 @@ export const matches = [
 		place: "home",
 		home: 1,
 		away: 1,
-		scorers: [],
+		scorers: ["68' Jan Furtak"],
 	},
 	{
 		teamName: "Piast Bolków",
@@ -243,7 +243,7 @@ export const matches = [
 		place: "away",
 		home: 2,
 		away: 2,
-		scorers: [],
+		scorers: ["11' Miłosz Morawski", "32'  Karol Sobczak"],
 	},
 	{
 		teamName: "KS Wojcieszyce",
