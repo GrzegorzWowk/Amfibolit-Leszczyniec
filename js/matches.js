@@ -267,7 +267,7 @@ export const matches = [
 		place: "home",
 		home: 2,
 		away: 1,
-		scorers: [],
+		scorers: ["29'  Karol Sobczak", "67'  Kamil Respondek"],
 	},
 	{
 		teamName: "Lechia Piechowice",
@@ -275,7 +275,7 @@ export const matches = [
 		place: "away",
 		home: 5,
 		away: 1,
-		scorers: [],
+		scorers: ["86'  Karol Sobczak"],
 	},
 	{
 		teamName: "Zakończenie sezonu",
